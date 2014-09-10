@@ -12,11 +12,11 @@ SYNOPSIS
        print "3\n";
 
 DESCRIPTION
-    Module::Notify runs callback code when it detects that a particular
-    module has been loaded.
+    Module::Notify runs callback code when it detects that a particular module
+    has been loaded.
 
   Constructor
-    "new($module_name, $callback)"
+    `new($module_name, $callback)`
         Runs the callback when the module is loaded.
 
         Unlike most OO modules, you can freely use this in void context, and
@@ -25,21 +25,21 @@ DESCRIPTION
 
            my $handle = Module::Notify->new($module, $callback);
 
-        If the module is *already* loaded, runs the callback immediately,
-        and returns undef instead of an object.
+        If the module is *already* loaded, runs the callback immediately, and
+        returns undef instead of an object.
 
   Object Methods
-    "cancel"
+    `cancel`
         Cancels the callback.
 
 CAVEATS
     Module::Notify works through an @INC hook. It ought to be the first item
-    in @INC and does its best to insert itself as $INC[0] at every
-    opportunity it gets.
+    in @INC and does its best to insert itself as $INC[0] at every opportunity
+    it gets.
 
     If any other path or hook does end up before Module::Notify's @INC hook,
-    then any modules loaded via that path or hook will escape
-    Module::Notify's notice.
+    then any modules loaded via that path or hook will escape Module::Notify's
+    notice.
 
 BUGS
     Please report any bugs to
@@ -54,8 +54,8 @@ AUTHOR
 COPYRIGHT AND LICENCE
     This software is copyright (c) 2013 by Toby Inkster.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+    This is free software; you can redistribute it and/or modify it under the
+    same terms as the Perl 5 programming language system itself.
 
 DISCLAIMER OF WARRANTIES
     THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
